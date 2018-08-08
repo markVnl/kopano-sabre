@@ -30,13 +30,13 @@
 	// Location of the SabreDAV server.
 	// see SabreDAV documentation: 
 	//      http://code.google.com/p/sabredav/wiki/CardDAV#Get_clients_working
-	define ('CARDDAV_ROOT_URI', '/sabre-zarafa');
+	define ('CARDDAV_ROOT_URI', '/kopano-sabre/server.php');
 
 	// Zarafa server location
-	define ('ZARAFA_SERVER', 'file:///var/run/zarafa');
+	define ('ZARAFA_SERVER', 'file:///var/run/kopano/server.sock');
 	
 	// Authentication realm
-	define ('SABRE_AUTH_REALM', 'Zarafa SabreDAV CardDav');
+	define ('SABRE_AUTH_REALM', 'Kopano SabreDAV CardDav');
 	
 	// Product ID sent in vcards
 	define ('VCARD_PRODUCT_ID', '-//SabreDav/ZarafaBackend/' . SABRE_ZARAFA_VERSION);
@@ -144,7 +144,7 @@
 	
 	// Set default timezone
 	if (function_exists("date_default_timezone_set")) {
-		date_default_timezone_set('Europe/Paris');
+		date_default_timezone_set('Europe/Amsterdam');
 	}
 
 	// Return ETags to the client. Normally, with reasonable clients like
